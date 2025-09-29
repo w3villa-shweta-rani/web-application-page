@@ -1,0 +1,365 @@
+/* === Global === */
+* {margin:0; padding:0; box-sizing:border-box;}
+body {
+  font-family: 'Roboto', sans-serif;
+  line-height:1.6;
+}
+.container {
+  width:90%;
+  max-width:1200px;
+  margin:auto;
+}
+a {text-decoration:none; color:#333;}
+.btn {padding:8px 16px; border:none; cursor:pointer;}
+.btn.primary {background:#ff7b5c; color:white; border-radius:4px;}
+
+/* === Navbar === */
+.navbar {
+  background:#fff;
+  border-bottom:1px solid #eee;
+  position:sticky;
+  top:0;
+  z-index:100;
+}
+.nav-content {
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  padding:15px 0;
+}
+.nav-links {
+  display:flex;
+  gap:20px;
+}
+.nav-btns .btn {
+  margin-left:10px;
+  background:#eee;
+  border-radius:4px;
+}
+.nav-btns .signup {
+  background:#ff7b5c;
+  color:#fff;
+}
+.menu-toggle {
+  display:none;
+  font-size:24px;
+  cursor:pointer;
+}
+
+/* === Hero === */
+.hero {
+  /* padding:60px 0; */
+  background:#f9f9f9;
+}
+.hero-content {
+  display:flex;
+  flex-wrap:wrap;
+  /* align-items:center; */
+  gap:30px;
+}
+.hero-text {
+  flex:1;
+  padding:40px;
+}
+.hero-text h1 {
+  font-size:2.5rem;
+  margin-bottom:20px;
+}
+.hero-text p {
+  margin-bottom:20px;
+  color:#555;
+}
+.hero-image {
+  flex:1;
+  
+}
+.hero-image img {
+  width:100%;
+  /* border-radius:8px; */
+  height:100%;
+}
+/* === Services Section === */
+.services {
+  padding:70px 0;
+  background:#fff;
+  text-align:center;
+}
+.services h2 {
+  font-size:2rem;
+  margin-bottom:10px;
+}
+.services-intro {
+  max-width:600px;
+  margin:0 auto 40px;
+  color:#666;
+  font-size:1rem;
+}
+
+.service-grid {
+  display:grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap:25px;
+}
+
+.service-card {
+  background:#f8f8f8;
+  padding:30px 20px;
+  border-radius:8px;
+  transition:transform 0.3s ease, box-shadow 0.3s ease;
+}
+.service-card .icon {
+  font-size:40px;
+  margin-bottom:15px;
+}
+.service-card h3 {
+  margin-bottom:10px;
+  font-size:1.3rem;
+}
+.service-card p {
+  color:#555;
+}
+.service-card:hover {
+  transform:translateY(-5px);
+  box-shadow:0 8px 20px rgba(0,0,0,0.1);
+}
+/* === Portfolio Section === */
+.portfolio {
+  padding:80px 0;
+  background:#f9f9f9;
+}
+.portfolio-item {
+  display:flex;
+  align-items:center;
+  gap:40px;
+  margin-bottom:60px;
+}
+.portfolio-item:last-child {
+  margin-bottom:0;
+}
+.portfolio-item.reverse {
+  flex-direction:row-reverse;
+}
+.portfolio-text {
+  flex:1;
+}
+.portfolio-text .tag {
+  display:inline-block;
+  color:#ff7b5c;
+  font-weight:600;
+  margin-bottom:10px;
+  font-size:0.9rem;
+}
+.portfolio-text h3 {
+  font-size:1.6rem;
+  margin-bottom:15px;
+  line-height:1.4;
+}
+.portfolio-text p {
+  color:#555;
+  margin-bottom:15px;
+}
+.learn-link {
+  color:#ff7b5c;
+  font-weight:600;
+  font-size:0.95rem;
+}
+.portfolio-img {
+  flex:1;
+}
+.portfolio-img img {
+  width:100%;
+  border-radius:50%;
+  max-width:350px;
+  display:block;
+  margin:auto;
+}
+
+/* === Brands Section === */
+.brands {
+  padding:70px 0;
+  background:#fff;
+  text-align:center;
+}
+.brands h2 {
+  font-size:1.8rem;
+  margin-bottom:40px;
+}
+.brand-logos {
+  display:grid;
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  gap:30px;
+  align-items:center;
+  justify-items:center;
+}
+.brand-logos img {
+  max-width:120px;
+  opacity:0.8;
+  transition:opacity 0.3s ease;
+}
+.brand-logos img:hover {
+  opacity:1;
+}
+
+/* === Call To Action === */
+.cta {
+  background:#ffc107;          /* vibrant yellow */
+  padding:60px 20px;
+  text-align:center;
+}
+.cta-content h2 {
+  font-size:2rem;
+  color:#333;
+  margin-bottom:20px;
+}
+.cta-btn {
+  background:#333;
+  color:#fff;
+  padding:12px 30px;
+  border-radius:4px;
+  font-weight:600;
+  display:inline-block;
+  transition:background 0.3s ease;
+}
+.cta-btn:hover {
+  background:#000;
+}
+
+/
+.brands {
+  padding: 60px 20px;
+  background-color: #f7f7f7; /* or your background */
+  text-align: center;
+}
+
+.brands h2 {
+  margin-bottom: 40px;
+  font-size: 2rem;
+  color: #333;
+}
+
+/* Grid layout for logos + names */
+.brand-logos {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  gap: 40px 30px;
+  justify-items: center;
+}
+
+.brand-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.brand-item img {
+  max-width: 50px;
+  height: auto;
+  margin-bottom: 8px;
+  opacity: 0.9;
+  transition: all 0.3s ease;
+}
+
+.brand-item span {
+  font-size: 0.9rem;
+  color: #555;
+  font-weight: 500;
+}
+
+.brand-item img:hover {
+  opacity: 1;
+  transform: scale(1.05);
+}
+
+/* Responsive tweaks */
+@media (max-width: 480px) {
+  .brand-item img {
+    max-width: 70px;
+  }
+  .brand-item span {
+    font-size: 0.8rem;
+  }
+}
+
+
+/* Responsive adjustments */
+@media(max-width:768px){
+  .footer {
+    text-align:center;
+  }
+  .social-icons a {
+    margin:0 8px;
+  }
+}
+
+
+/* === Responsive === */
+@media(max-width:768px){
+  .brand-logos {
+    gap:20px;
+  }
+  .cta-content h2 {
+    font-size:1.6rem;
+  }
+}
+
+
+/* === Responsive === */
+@media(max-width:992px){
+  .portfolio-item,
+  .portfolio-item.reverse {
+    flex-direction:column;
+    text-align:center;
+  }
+  .portfolio-img img {
+    border-radius:10px;   /* square/rounded look on small screens */
+    max-width:100%;
+  }
+}
+
+
+/* === Responsive === */
+@media(max-width:768px){
+  .nav-links,
+  .nav-btns {
+    display:none;
+  }
+  .menu-toggle {
+    display:block;
+  }
+  .hero-content {
+    flex-direction:column;
+    text-align:center;
+  }
+}
+
+/* === Portfolio Circular Images === */
+.portfolio-img {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.portfolio-img img {
+  
+  width: 280px;           /* adjust size as needed */
+  height: 280px;          /* must match width for a perfect circle */
+  border-radius: 50%;     /* makes the image circular */
+  object-fit: cover;      /* crops image to fill the circle without stretching */
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15); /* optional subtle shadow */
+}
+
+/* Responsive adjustments */
+@media (max-width: 992px) {
+  .portfolio-img img {
+    width: 220px;
+    height: 220px;
+  }
+}
+@media (max-width: 600px) {
+  .portfolio-img img {
+    width: 180px;
+    height: 180px;
+  }
+}
+
